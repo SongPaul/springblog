@@ -3,9 +3,12 @@ package com.brightyoun.blog.presentation;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,10 +27,15 @@ public class PostController {
 	public String form(Post post){
 		return "form";
 	}
+	
 	@RequestMapping(value = "/write", method = RequestMethod.POST)
-	public String write(Post post){
-		post.setRegDate(new Date());
-		return "redirect:/post/" + postDao.save(post).getId();
+	public String write(@Valid Post post, BindingResult bindingResult) {
+		System.out.println("111");
+	    if (bindingResult.hasErrors()) {
+	        return "form";
+	    }
+	    post.setRegDate(new Date());
+	    return "redirect:/post/" + postDao.save(post).getId();
 	}
 	
 	@RequestMapping("/list")
