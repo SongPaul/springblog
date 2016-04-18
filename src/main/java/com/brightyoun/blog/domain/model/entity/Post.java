@@ -1,7 +1,5 @@
 package com.brightyoun.blog.domain.model.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,6 +18,10 @@ public class Post {
 	@GeneratedValue
 	int id;
 	
+	String userId;
+	String name;
+	String _csrf;
+	
 	@NotNull
 	@Size(min = 1, max = 255)
 	@Column(nullable = false)
@@ -33,6 +35,7 @@ public class Post {
 	@Column(length = 1000000000, nullable = false)
 	String content;
 	
-	Date regDate;
+	@Column(nullable = false)
+	String regDate;
 	
 }
