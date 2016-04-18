@@ -41,6 +41,9 @@
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/songyoungyoun/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/2.2.3/19d1bfa1b3b44d9ec66d3b672bcd26b470185708/jquery-2.2.3.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/songyoungyoun/.gradle/caches/modules-2/files-2.1/org.webjars.bower/origoni-startbootstrap-clean-blog/1.0.3/f8542f98f26cf2b4cb7744c6a6df629f4bfd0ec5/origoni-startbootstrap-clean-blog-1.0.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//Users/songyoungyoun/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.4.191/dec3540178ea889b2871b0ed56db14bbec9cfdfc/h2-1.4.191.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
